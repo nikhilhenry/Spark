@@ -31,17 +31,28 @@ class MyFrame(wx.Frame):
 
         input = self.txt.GetValue()
         input = input.lower()
-        try:    
-            res = client.query(input)
-            answer = next(res.results).text
+        if answer == "Who created you" .or "Who created you ?" .or "Who made you" .or "Who made you ?" :
+            answer = "I was created by a genius, 13 year old Nikhil Henry"
             print answer
-            
-        except:  
+        elif answer == "Who are you" . or "What are you " .or "Who are you ?" .or "What are you ?":
+            answer = "I'm PyDa the python Digital Assistant"
+            print answer
+        elif answer == "Where were you made" .or "Where were you made ?" .or "Where were you created" .or "Where were you created ?":
+            answer = "I was created in Bangalore,India"
+            print answer
+
+        else:
+            try:
+                res = client.query(input)
+                answer = next(res.results).text
+                print answer
+
+            except:
                 input = input.split(' ')
                 input = ' '.join(input[2:])
-                
+
                 print wikipedia.summary(input)
-            
+
 
 
 if __name__ == "__main__":
