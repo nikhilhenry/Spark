@@ -31,15 +31,16 @@ class MyFrame(wx.Frame):
 
         input = self.txt.GetValue()
         input = input.lower()
-        if answer == "Who created you" .or "Who created you ?" .or "Who made you" .or "Who made you ?" :
+        print input 
+        if input == "who created you" or "who created you ?" or "who made you" or "who made you ?" :
             answer = "I was created by a genius, 13 year old Nikhil Henry"
             print answer
-        elif answer == "Who are you" . or "What are you " .or "Who are you ?" .or "What are you ?":
-            answer = "I'm PyDa the python Digital Assistant"
-            print answer
-        elif answer == "Where were you made" .or "Where were you made ?" .or "Where were you created" .or "Where were you created ?":
-            answer = "I was created in Bangalore,India"
-            print answer
+
+        elif  input == "who are you" or "what are you" or "who are you ?" or "what are you ?":
+              print "I'm PyDa the python Digital Assistant"
+
+        elif  input == "where were you made" or "where were you made ?" or "where were you created" or "where were you created ?":
+              print "I was created in bangalore,india"
 
         else:
             try:
