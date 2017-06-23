@@ -31,7 +31,7 @@ class MyFrame(wx.Frame):
 
         input = self.txt.GetValue()
         input = input.lower()
-        print input
+        
         if input == "who created you" or input == "who created you ?" or input == "who made you" or input == "who made you ?" :
             print "I was created by a genius, 13 year old Nikhil Henry"
 
