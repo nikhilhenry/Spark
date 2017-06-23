@@ -31,15 +31,15 @@ class MyFrame(wx.Frame):
 
         input = self.txt.GetValue()
         input = input.lower()
-        print input 
-        if input == "who created you" or "who created you ?" or "who made you" or "who made you ?" :
-            answer = "I was created by a genius, 13 year old Nikhil Henry"
-            print answer
+        print input
+        if input == "who created you" or input == "who created you ?" or input == "who made you" or input == "who made you ?" :
+            print "I was created by a genius, 13 year old Nikhil Henry"
 
-        elif  input == "who are you" or "what are you" or "who are you ?" or "what are you ?":
+
+        elif  input == "who are you" or input == "what are you" or input == "who are you ?" or input == "what are you ?":
               print "I'm PyDa the python Digital Assistant"
 
-        elif  input == "where were you made" or "where were you made ?" or "where were you created" or "where were you created ?":
+        elif  input == "where were you made" or input == "where were you made ?" or input == "where were you created" or input == "where were you created ?":
               print "I was created in bangalore,india"
 
         else:
@@ -50,6 +50,7 @@ class MyFrame(wx.Frame):
 
             except:
                 input = input.split(' ')
+
                 input = ' '.join(input[2:])
 
                 print wikipedia.summary(input)
