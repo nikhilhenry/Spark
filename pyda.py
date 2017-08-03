@@ -3,14 +3,14 @@ import wikipedia
 import wolframalpha
 from espeak import espeak
 
+#Api stuff
+app_id = "YPR8W2-2JJ5UWLW8G"#wolframalpha api key
+client = wolframalpha.Client(app_id)#creating client for wikipedia
 
-app_id = "YPR8W2-2JJ5UWLW8G"
-client = wolframalpha.Client(app_id)
-
-espeak.synth("Hey I'm PyDa")
+espeak.synth("Hey I'm PyDa")#fisrt statement on bootup
 
 
-
+#UI declaration and intialization
 class MyFrame(wx.Frame):
     def __init__(self):
         wx.Frame.__init__(self, None,
@@ -30,10 +30,14 @@ class MyFrame(wx.Frame):
         panel.SetSizer(my_sizer)
         self.Show()
 
+
+    #Getting query
     def OnEnter(self, event):
 
         input = self.txt.GetValue()
-        input = input.lower()
+        input = input.lower()#Changing to a lower case
+
+        #Fun stuff
 
         if input == "who created you" or input == "who created you ?" or input == "who created you?" or input == "who made you" or input == "who made you ?" or input == "who made you?" :
             print "I was created by a genius, 13 year old Nikhil Henry"
@@ -53,13 +57,15 @@ class MyFrame(wx.Frame):
              espeak.synth("My name is Python Digital Assistant but you can call me PyDa")
 
         else:
-            try:
+
+            #Fetching data
+            try:#from wolframalpha
                 res = client.query(input)
                 answer = next(res.results).text
                 print answer
                 espeak.synth(answer)
 
-            except:
+            except:#from wikipedia
                 input = input.split(' ')
 
                 input = ' '.join(input[2:])
@@ -68,7 +74,7 @@ class MyFrame(wx.Frame):
                 espeak.synth("I found this article on wikipedia")
 
 
-
+#to keep runing
 if __name__ == "__main__":
     app = wx.App(True)
     frame = MyFrame()
