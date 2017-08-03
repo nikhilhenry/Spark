@@ -41,7 +41,7 @@ class MyFrame(wx.Frame):
 
         if input == "who created you" or input == "who created you ?" or input == "who created you?" or input == "who made you" or input == "who made you ?" or input == "who made you?" :
             print "I was created by a genius, 13 year old Nikhil Henry"
-            espeak.synth("I was created by a genius, 13 year old Nikhil Henry")
+            espeak.synth("I was created by a genius, 13 year old Nikhil Henry and 14 year old Abhinav Shenoy")
 
 
         elif  input == "who are you" or input == "what are you" or input == "who are you ?" or input == "what are you ?" or input == "what are you?" or input == "who are you?":
