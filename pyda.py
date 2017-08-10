@@ -56,22 +56,36 @@ class MyFrame(wx.Frame):
              print "My name is Python Digital Assistant but you can call me PyDa"
              espeak.synth("My name is Python Digital Assistant but you can call me PyDa")
 
+        elif input == "howdy":
+             print "howdy partner"
+             espeak.synth("howdy partner")
+
+        elif input == "i love you" or input == "i love youy PyDa":
+             print "I am a computer, I have no feelings"
+             espeak.synth("I am a computer, I have no feelings")
+        elif input == "how are you" or input == "how are you?":
+             print "I am fine, how are you?"
+             espeak.synth("I am fine, how are you?")
         else:
 
-            #Fetching data
-            try:#from wolframalpha
-                res = client.query(input)
-                answer = next(res.results).text
-                print answer
-                espeak.synth(answer)
+            try:
 
-            except:#from wikipedia
-                input = input.split(' ')
+                #Fetching data
+                try:#from wolframalpha
+                    res = client.query(input)
+                    answer = next(res.results).text
+                    print answer
+                    espeak.synth(answer)
 
-                input = ' '.join(input[2:])
+                except:#from wikipedia
+                    input = input.split(' ')
 
-                print wikipedia.summary(input)
-                espeak.synth("I found this article on wikipedia")
+                    input = ' '.join(input[2:])
+
+                    print wikipedia.summary(input)
+                    espeak.synth("I found this article on wikipedia")
+            except:
+                print "Check your internet connection, error code 404"
 
 
 #to keep runing
