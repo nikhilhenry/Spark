@@ -1,4 +1,4 @@
-# PyDa
+# Spark
 A python Digital Assistant
 
 This project requires python 2.7(please visit the python website for more information)
