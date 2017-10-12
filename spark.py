@@ -7,7 +7,7 @@ from espeak import espeak
 app_id = "YPR8W2-2JJ5UWLW8G"#wolframalpha api key
 client = wolframalpha.Client(app_id)#creating client for wikipedia
 
-espeak.synth("Hey I'm PyDa")#fisrt statement on bootup
+espeak.synth("Hey I'm Spark")#fisrt statement on bootup
 
 
 #UI declaration and intialization
@@ -21,7 +21,7 @@ class MyFrame(wx.Frame):
         panel = wx.Panel(self)
         my_sizer = wx.BoxSizer(wx.VERTICAL)
         lbl = wx.StaticText(panel,
-        label="Hello I am Pyda the Python Digital Assistant. How can I help you?")
+        label="Hello I am Spark the Python Digital Assistant. How can I help you?")
         my_sizer.Add(lbl, 0, wx.ALL, 5)
         self.txt = wx.TextCtrl(panel, style=wx.TE_PROCESS_ENTER,size=(400,30))
         self.txt.SetFocus()
@@ -45,8 +45,8 @@ class MyFrame(wx.Frame):
 
 
         elif  input == "who are you" or input == "what are you" or input == "who are you ?" or input == "what are you ?" or input == "what are you?" or input == "who are you?":
-              print "I'm PyDa the python Digital Assistant"
-              espeak.synth("I'm PyDa the python Digital Assistant")
+              print "I'm Spark the python Digital Assistant"
+              espeak.synth("I'm Spark the python Digital Assistant")
 
         elif  input == "where were you made" or input == "where were you made ?" or input == "where were you created" or input == "where were you created ?" or input == "where were you made?" or input == "where were you created?":
               print "I was created in Bangalore,India"
@@ -60,7 +60,7 @@ class MyFrame(wx.Frame):
              print "howdy partner"
              espeak.synth("howdy partner")
 
-        elif input == "i love you" or input == "i love youy PyDa":
+        elif input == "i love you" or input == "i love you Spark" or input == "I love you Spark" or input == "i love you spark":
              print "I am a computer, I have no feelings"
              espeak.synth("I am a computer, I have no feelings")
         elif input == "how are you" or input == "how are you?":
