@@ -74,8 +74,9 @@ class MyFrame(wx.Frame):
                 try:#from wolframalpha
                     res = client.query(input)
                     answer = next(res.results).text
+                    answer = answer.replace(" ", "_")
                     print answer
-                    espeak.synth(answer)
+                    os.system("espeak "answer)
 
                 except:#from wikipedia
                     input = input.split(' ')
@@ -83,7 +84,7 @@ class MyFrame(wx.Frame):
                     input = ' '.join(input[2:])
 
                     print wikipedia.summary(input)
-                    espeak.synth("I found this article on wikipedia")
+                    os.system("espeak I found this article on wikipedia")
             except:
                 print "Check your internet connection, error code 404"
 
