@@ -34,52 +34,56 @@ os.system("espeak Hello, I'm Spark your personal Assistant")
 
 
     #Getting query
-    def OnEnter(self, event):
+def OnEnter(self, event):
 
-        input = self.txt.GetValue()
-        input = input.lower()#Changing to a lower case
+    input = self.txt.GetValue()
+    input = input.lower()#Changing to a lower case
 
-        #Fun stuff
+    #Fun stuff
 
-        if input == "who created you" or input == "who created you ?" or input == "who created you?" or input == "who made you" or input == "who made you ?" or input == "who made you?" :
-            print "I was created by a genius, 13 year old Nikhil Henry and 14 year old Abhinav Shenoy"
-            os.system("espeak I was created by a genius, 13 year old Nikhil Henry and 14 year old Abhinav Shenoy")
+    if input == "who created you" or input == "who created you ?" or input == "who created you?" or input == "who made you" or input == "who made you ?" or input == "who made you?" :
+        print "I was created by a genius, 13 year old Nikhil Henry and 14 year old Abhinav Shenoy"
+        os.system("espeak I was created by a genius, 13 year old Nikhil Henry and 14 year old Abhinav Shenoy")
 
 
-        elif  input == "who are you" or input == "what are you" or input == "who are you ?" or input == "what are you ?" or input == "what are you?" or input == "who are you?":
-              print "I'm Spark the python Digital Assistant"
-              os.system("espeak I'm Spark the python Digital Assistant")
+    elif  input == "who are you" or input == "what are you" or input == "who are you ?" or input == "what are you ?" or input == "what are you?" or input == "who are you?":
+        print "I'm Spark the python Digital Assistant"
+        os.system("espeak I'm Spark the python Digital Assistant")
 
-        elif  input == "where were you made" or input == "where were you made ?" or input == "where were you created" or input == "where were you created ?" or input == "where were you made?" or input == "where were you created?":
-              print "I was created in Bangalore,India"
-              os.system("espeak I was created in Bangalore,India")
+    elif  input == "where were you made" or input == "where were you made ?" or input == "where were you created" or input == "where were you created ?" or input == "where were you made?" or input == "where were you created?":
+        print "I was created in Bangalore,India"
+        os.system("espeak I was created in Bangalore,India")
 
-        elif input == "whats your name" or input == "what's your name ?" or input == "what's your name?" or input == "whats your name?" or input == "whats your name ?":
-             print "My name is Python Digital Assistant but you can call me PyDa"
-             os.system("espeak My name is Python Digital Assistant but you can call me PyDa")
+    elif input == "whats your name" or input == "what's your name ?" or input == "what's your name?" or input == "whats your name?" or input == "whats your name ?":
+        print "My name is Python Digital Assistant but you can call me PyDa"
+        os.system("espeak My name is Python Digital Assistant but you can call me PyDa")
 
-        elif input == "howdy":
-             print "howdy partner"
-             os.system("espeak howdy partner")
+    elif input == "howdy":
+        print "howdy partner"
+        os.system("espeak howdy partner")
 
-        elif input == "i love you" or input == "i love you Spark" or input == "I love you Spark" or input == "i love you spark":
-             print "I am a computer, I have no feelings"
-             os.system("espeak I am a computer, I have no feelings")
-        elif input == "how are you" or input == "how are you?":
-             print "I am fine, how are you?"
-             os.system("espeak I am fine, how are you?")
-        else:
+    elif input == "i love you" or input == "i love you Spark" or input == "I love you Spark" or input == "i love you spark":
+        print "I am a computer, I have no feelings"
+        os.system("espeak I am a computer, I have no feelings")
+    elif input == "how are you" or input == "how are you?":
+        print "I am fine, how are you?"
+        os.system("espeak I am fine, how are you?")
+    else:
 
+        try:
+
+	        #Fetching data
             try:
 
-                #Fetching data
-                try:#from wolframalpha
-                    res = client.query(input)
-                    answer = next(res.results).text
-                    print answer
-                    espeak.synth(answer)
+            	#from wolframalpha
 
-                except:#from wikipedia
+                res = client.query(input)
+                answer = next(res.results).text
+                print answer
+                espeak.synth(answer)
+
+                except:
+                	#from wikipedia
                     input = input.split(' ')
 
                     input = ' '.join(input[2:])
