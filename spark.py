@@ -62,7 +62,7 @@ class MyFrame(wx.Frame):
 
         elif input == "i love you" or input == "i love you Spark" or input == "I love you Spark" or input == "i love you spark":
              print "I am a computer, I have no feelings"
-             os.system("espeak I am a computer, I have no feelings")
+             os.system("espeak I_am_a_computer,_I_have_no_feelings")
         elif input == "how are you" or input == "how are you?":
              print "I am fine, how are you?"
              os.system("espeak I_am_fine,_how_are_you?")
@@ -76,7 +76,7 @@ class MyFrame(wx.Frame):
                     answer = next(res.results).text
                     answer = answer.replace(" ", "_")
                     print answer
-                    os.system("espeak "answer)
+                    os.system("espeak ")
 
                 except:#from wikipedia
                     input = input.split(' ')
