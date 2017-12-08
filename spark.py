@@ -7,7 +7,7 @@ import os
 app_id = "YPR8W2-2JJ5UWLW8G"#wolframalpha api key
 client = wolframalpha.Client(app_id)#creating client for wikipedia
 
-os.system("espeak Hey I'm Spark")#fisrt statement on bootup
+os.system("espeak Hey_I\'m_Spark")#fisrt statement on bootup
 
 
 #UI declaration and intialization
@@ -41,31 +41,31 @@ class MyFrame(wx.Frame):
 
         if input == "who created you" or input == "who created you ?" or input == "who created you?" or input == "who made you" or input == "who made you ?" or input == "who made you?" :
             print "I was created by a genius, 13 year old Nikhil Henry and 14 year old Abhinav Shenoy"
-            os.system("espeak I was created by a genius, 13 year old Nikhil Henry and 14 year old Abhinav Shenoy")
+            os.system("espeak I_was_created_by_a_genius,_13_year_old_Nikhil_Henry_and_14_year_old_Abhinav_Shenoy")
 
 
         elif  input == "who are you" or input == "what are you" or input == "who are you ?" or input == "what are you ?" or input == "what are you?" or input == "who are you?":
               print "I'm Spark the python Digital Assistant"
-              os.system("espeak I'm Spark the python Digital Assistant")
+              os.system("espeak I\'m_Spark_the_python_Digital_Assistant")
 
         elif  input == "where were you made" or input == "where were you made ?" or input == "where were you created" or input == "where were you created ?" or input == "where were you made?" or input == "where were you created?":
               print "I was created in Bangalore,India"
-              os.system("espeak I was created in Bangalore,India")
+              os.system("espeak I_was_created_in_Bangalore,India")
 
         elif input == "whats your name" or input == "what's your name ?" or input == "what's your name?" or input == "whats your name?" or input == "whats your name ?":
              print "My name is Python Digital Assistant but you can call me PyDa"
-             os.system("espeak My name is Python Digital Assistant but you can call me PyDa")
+             os.system("espeak My_name_is_Spark!")
 
         elif input == "howdy":
              print "howdy partner"
-             os.system("espeak howdy partner")
+             os.system("espeak howdy_partner")
 
         elif input == "i love you" or input == "i love you Spark" or input == "I love you Spark" or input == "i love you spark":
              print "I am a computer, I have no feelings"
              os.system("espeak I am a computer, I have no feelings")
         elif input == "how are you" or input == "how are you?":
              print "I am fine, how are you?"
-             os.system("espeak I am fine, how are you?")
+             os.system("espeak I_am_fine,_how_are_you?")
         else:
 
             try:
