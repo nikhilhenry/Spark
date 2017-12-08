@@ -70,21 +70,31 @@ class MyFrame(wx.Frame):
 
             try:
 
-                #Fetching data
-                try:#from wolframalpha
+                try:
+                  if "open" in input:
+                    input = input.split(' ')
+                    input = ' '.join(input[1:])
+                    os.system(input)
+                except:
+
+
+                  #Fetching data
+                  try:#from wolframalpha
                     res = client.query(input)
                     answer = next(res.results).text
-                    answer = answer.replace(" ", "_")
+                    
                     print answer
-                    os.system("espeak ")
+                    
 
-                except:#from wikipedia
-                    input = input.split(' ')
+                  except:
+                   #from wikipedia
 
-                    input = ' '.join(input[2:])
+                   input = input.split(' ')
 
-                    print wikipedia.summary(input)
-                    os.system("espeak I found this article on wikipedia")
+                   input = ' '.join(input[2:])
+
+                   print wikipedia.summary(input)
+                   os.system("espeak I found this article on wikipedia")
             except:
                 print "Check your internet connection, error code 404"
 
