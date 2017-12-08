@@ -1,13 +1,13 @@
 import wx
 import wikipedia
 import wolframalpha
-from espeak import espeak
+import os
 
 #Api stuff
 app_id = "YPR8W2-2JJ5UWLW8G"#wolframalpha api key
 client = wolframalpha.Client(app_id)#creating client for wikipedia
 
-espeak.synth("Hey I'm Spark")#fisrt statement on bootup
+os.system("espeak Hey I'm Spark")#fisrt statement on bootup
 
 
 #UI declaration and intialization
@@ -41,31 +41,31 @@ class MyFrame(wx.Frame):
 
         if input == "who created you" or input == "who created you ?" or input == "who created you?" or input == "who made you" or input == "who made you ?" or input == "who made you?" :
             print "I was created by a genius, 13 year old Nikhil Henry and 14 year old Abhinav Shenoy"
-            espeak.synth("I was created by a genius, 13 year old Nikhil Henry and 14 year old Abhinav Shenoy")
+            os.system("espeak I was created by a genius, 13 year old Nikhil Henry and 14 year old Abhinav Shenoy")
 
 
         elif  input == "who are you" or input == "what are you" or input == "who are you ?" or input == "what are you ?" or input == "what are you?" or input == "who are you?":
               print "I'm Spark the python Digital Assistant"
-              espeak.synth("I'm Spark the python Digital Assistant")
+              os.system("espeak I'm Spark the python Digital Assistant")
 
         elif  input == "where were you made" or input == "where were you made ?" or input == "where were you created" or input == "where were you created ?" or input == "where were you made?" or input == "where were you created?":
               print "I was created in Bangalore,India"
-              espeak.synth("I was created in Bangalore,India")
+              os.system("espeak I was created in Bangalore,India")
 
         elif input == "whats your name" or input == "what's your name ?" or input == "what's your name?" or input == "whats your name?" or input == "whats your name ?":
              print "My name is Python Digital Assistant but you can call me PyDa"
-             espeak.synth("My name is Python Digital Assistant but you can call me PyDa")
+             os.system("espeak My name is Python Digital Assistant but you can call me PyDa")
 
         elif input == "howdy":
              print "howdy partner"
-             espeak.synth("howdy partner")
+             os.system("espeak howdy partner")
 
         elif input == "i love you" or input == "i love you Spark" or input == "I love you Spark" or input == "i love you spark":
              print "I am a computer, I have no feelings"
-             espeak.synth("I am a computer, I have no feelings")
+             os.system("espeak I am a computer, I have no feelings")
         elif input == "how are you" or input == "how are you?":
              print "I am fine, how are you?"
-             espeak.synth("I am fine, how are you?")
+             os.system("espeak I am fine, how are you?")
         else:
 
             try:
